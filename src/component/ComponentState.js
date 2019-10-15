@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 
 class ComponentState extends React.Component{
     constructor(){
@@ -15,7 +15,9 @@ class ComponentState extends React.Component{
         //#3 read component state menggunakan this state <nama state>
         return(
             <View>
-                <Text>{this.state.name}</Text>
+                <TouchableOpacity>
+                    <Text>{this.state.name}</Text>
+                </TouchableOpacity>
             </View>
         );
     }
