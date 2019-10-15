@@ -5,12 +5,6 @@ import {
     StyleSheet
 } from 'react-native';
 
-const styles = StyleSheet.create({
-    red: {
-        color: 'red',
-    },
-});
-
 
 class PropEx extends React.Component {
     render() {
@@ -27,3 +21,10 @@ class PropEx extends React.Component {
 }
 
 export default PropEx;
+
+
+const styles = StyleSheet.create({
+    red: {
+        color: 'red',
+    },
+});

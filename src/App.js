@@ -7,8 +7,8 @@ import {
     ScrollView,
 
 } from 'react-native';
-//import PropEx from './PropEx';
-import Rumus from './Rumus';
+import PropEx from './PropEx';
+import AppStatles from './AppStatles';
 class App extends React.Component{
     render(){
         return(
@@ -16,15 +16,24 @@ class App extends React.Component{
                 <ScrollView contentInsetAdjustmentBehavior='automatic'>
                     <View style={styles.background}>
                         <View style={styles.margin}>
-                            <Rumus nama="Segitiga" luas="1/2 x a x t" keliling="a + b + c"/>
                             <Text style={styles.hr}></Text>
-                            <Rumus nama="Persegi Panjang" luas="Panjang x Lebar" keliling="2 x p x l" />
+                            <PropEx nama="Agus" alamat="Bandung" telp="081234" email='agus@gmail.com'/>
                             <Text style={styles.hr}></Text>
-                            <Rumus nama="Lingkaran" luas="3.14 x r x r" keliling="3.14 x 2" />
+                            <AppStatles nama="Budi" alamat="Jakarta" telp="081111" email='budi@gmail.com' />
                             <Text style={styles.hr}></Text>
-                            <Rumus nama="Persegi" luas="p x l" keliling="4 x sisi" />
+                            <AppStatles nama="Joko" alamat="Semaran" telp="082222" email='joko@gmail.com' />
                             <Text style={styles.hr}></Text>
-                            <Rumus nama="Jajar Genjang" luas="a x t" keliling="2 x (a + b )" />
+                            <AppStatles nama="Yanto" alamat="Purwokerto" telp="083333" email='yanto@gmail.com' />
+                            <Text style={styles.hr}></Text>
+                            <AppStatles nama="Jajang" alamat="Cianjur" telp="084444" email='jajang@gmail.com' />
+                            <Text style={styles.hr}></Text>
+                            <AppStatles nama="Gusti" alamat="Jakarta" telp="085555" email='gusti@gmail.com' />
+                            <Text style={styles.hr}></Text>
+                            <AppStatles nama="Bambang" alamat="Solo" telp="086666" email='bambang@gmail.com' />
+                            <Text style={styles.hr}></Text>
+                            <AppStatles nama="Yinika" alamat="Jakarta" telp="087777" email='yunika@gmail.com' />
+                            <Text style={styles.hr}></Text>
+                            <AppStatles nama="Budi" alamat="Jakarta" telp="081111" email='budi@gmail.com' />
                             <Text style={styles.hr}></Text>
                         </View>
                     </View>
