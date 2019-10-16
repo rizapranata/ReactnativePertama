@@ -17,8 +17,11 @@ class Counter extends React.Component{
     }
     render(){
         //#3 read component start
-        let currentValue = parseInt(this.state.value);
-       
+        let currentValue = this.state.value;
+        if(currentValue % 6 == 0){
+            currentValue = 'kucing';
+        }
+
         return(
             <View>
                 <Text style={styles.hasil}>Nilai state saat ini {currentValue}</Text>
@@ -29,6 +32,7 @@ class Counter extends React.Component{
                 <TouchableOpacity style={styles.button} onPress={() => this.minus() }>
                     <Text style={{ color: '#FF0000'}}>Kurang</Text>
                 </TouchableOpacity>
+                
             </View>
         )
     }
@@ -40,6 +44,7 @@ const styles = StyleSheet.create({
         backgroundColor : '#808080',
         padding : 20,
         margin : 4,
+        borderRadius: 9,
     },
 
     hasil : {
