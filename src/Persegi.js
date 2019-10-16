@@ -1,6 +1,6 @@
 import React from 'react'
 import{
-    Text,View,StyleSheet,TextInput,Button
+    Text,View,StyleSheet,TextInput,Button,Picker
 }from 'react-native';
 
 class Persegi extends React.Component{
@@ -11,8 +11,19 @@ class Persegi extends React.Component{
     hitungLuas =()=>{
         let panjang = this.state.panjang; //tampung nilai state akhir pada variable panjang
         let lebar = this.state.lebar; //tampung nilai state akhir pada variable lebar
-        let luas = parseInt(panjang * lebar); // menghitung luas persegi variable panjang dan luas harus di konversikan ke int karena asalnya string
-        this.setState({luas : luas}); //set State luas
+
+        if(this.state.rumus == 'luas'){
+            let luas = parseInt(panjang) * parseInt(lebar);
+            this.setState({formula : luas});
+        }else if(this.state.rumus == 'keliling'){
+            let keliling = (parseInt(panjang) + parseInt(lebar)) * 2;
+            this.setState({formula : keliling});
+        }
+
+        console.log(this.state);
+
+        // let luas = parseInt(panjang * lebar); // menghitung luas persegi variable panjang dan luas harus di konversikan ke int karena asalnya string
+        // this.setState({luas : luas}); //set State luas
     }
 
     render(){
@@ -34,6 +45,15 @@ class Persegi extends React.Component{
                     onChangeText={(inputLebar) => this.setState({lebar: inputLebar})}
                     value={this.state.lebar}
                 />
+
+                <Picker 
+                   selectedValue={this.state.rumus}
+                   style={{height:100, width:300}}
+                   onValueChange={(itemValue, itemIndex)=> this.setState({rumus: itemValue})} >
+                  <Picker.Item label="Pilihan Tipe" value="" />
+                  <Picker.Item label="Luas" value="luas" />
+                  <Picker.Item label="Keliling" value="keliling" />
+                </Picker>
 
                 <Button title="Hitung Luas"
                     onPress={()=> {

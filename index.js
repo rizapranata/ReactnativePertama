@@ -3,7 +3,7 @@
  */
 
 import {AppRegistry} from 'react-native';
-import App from './src/PajakDanPersegi';
+import App from './src/ProfileColor';
 import {name as appName} from './app.json';
 
 AppRegistry.registerComponent(appName, () => App);
